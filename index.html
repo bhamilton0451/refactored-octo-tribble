@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <meta name="author" content="Bryan Montgomery Hamilton">
+  <meta name="keywords" content="200021401, javascript">
+  <meta name="description" content="Atividade sobre javascript">
+
+  <script>
+    function negativo_ou_nao(a) {
+      if (a == 0) {
+        return "Neutro."
+      } else if (a > 0) {
+        return "Positivo."
+      } return "Negativo."
+    }
+
+    function editNegativo(a) {
+      result = negativo_ou_nao(a)
+
+      document.getElementById("paragraph_1").innerHTML = a + " é um número " + result
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <label for="numero">Insira Número:</label><br>
+  <input type="number" id="a"><br>
+  <button onclick="editNegativo(document.getElementById('a').value)">
+    Medir
+  </button>
+
+  <p id="paragraph_1"></p>
+</body>
+
+</html>
